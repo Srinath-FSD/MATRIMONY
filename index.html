@@ -1260,14 +1260,14 @@
      <div class="cyber-logo" id="nav-logo" data-text="Rasi Matrimony">
       Rasi Matrimony
      </div>
-     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
+     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('register')">Register</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
      </div>
     </nav>
     <div class="ultra-hero">
      <div class="hero-content">
       <h1 class="glitch-title" id="hero-title-text" data-text="Find Your Perfect Match">Find Your Perfect Match</h1>
       <p class="cyber-subtitle" id="hero-subtitle-text">Where Hearts Meet &amp; Love Begins</p>
-      <div class="cta-container"><button class="ultra-cta" onclick="navigateTo('brides')"> <span>Register Now</span> </button> <button class="ultra-cta" onclick="navigateTo('brides')"> <span>View Profiles</span> </button>
+      <div class="cta-container"><button class="ultra-cta" onclick="navigateTo('register')"> <span>Register Now</span> </button> <button class="ultra-cta" onclick="navigateTo('brides')"> <span>View Profiles</span> </button>
       </div>
      </div>
     </div>
@@ -1338,13 +1338,90 @@
       </div>
      </div>
     </div>
+   </div><!-- REGISTER PAGE -->
+   <div id="register-page" class="page">
+    <nav class="futuristic-nav">
+     <div class="cyber-logo" id="nav-logo-register" data-text="Rasi Matrimony">
+      Rasi Matrimony
+     </div>
+     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('register')">Register</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
+     </div>
+    </nav>
+    <h1 class="mega-title">Registration Form</h1>
+    <div class="contact-wrapper" style="max-width: 1000px;">
+     <form class="contact-form-box" onsubmit="submitRegistrationForm(event)">
+      <h3 style="color: #e63946; margin: 0 0 30px 0; text-align: center; font-size: 24px; font-weight: 700; font-family: 'Exo 2', sans-serif;">Personal Information</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+       <div class="form-field"><label for="reg-full-name" class="form-field-label">Full Name *</label> <input type="text" id="reg-full-name" class="form-field-input" placeholder="Enter your full name" required>
+       </div>
+       <div class="form-field"><label for="reg-gender" class="form-field-label">Gender *</label> <select id="reg-gender" class="form-field-input" required style="appearance: auto;"> <option value="">Select Gender</option> <option value="male">Male</option> <option value="female">Female</option> </select>
+       </div>
+       <div class="form-field"><label for="reg-dob" class="form-field-label">Date of Birth *</label> <input type="date" id="reg-dob" class="form-field-input" required>
+       </div>
+       <div class="form-field"><label for="reg-age" class="form-field-label">Age *</label> <input type="number" id="reg-age" class="form-field-input" placeholder="Enter your age" min="18" max="100" required>
+       </div>
+       <div class="form-field"><label for="reg-height" class="form-field-label">Height *</label> <input type="text" id="reg-height" class="form-field-input" placeholder="e.g., 5'6&quot;" required>
+       </div>
+       <div class="form-field"><label for="reg-religion" class="form-field-label">Religion *</label> <input type="text" id="reg-religion" class="form-field-input" placeholder="Enter your religion" required>
+       </div>
+       <div class="form-field"><label for="reg-caste" class="form-field-label">Caste</label> <input type="text" id="reg-caste" class="form-field-input" placeholder="Enter your caste">
+       </div>
+       <div class="form-field"><label for="reg-mother-tongue" class="form-field-label">Mother Tongue *</label> <input type="text" id="reg-mother-tongue" class="form-field-input" placeholder="Enter mother tongue" required>
+       </div>
+       <div class="form-field"><label for="reg-marital-status" class="form-field-label">Marital Status *</label> <select id="reg-marital-status" class="form-field-input" required style="appearance: auto;"> <option value="">Select Status</option> <option value="never-married">Never Married</option> <option value="divorced">Divorced</option> <option value="widowed">Widowed</option> </select>
+       </div>
+      </div>
+      <h3 style="color: #e63946; margin: 40px 0 30px 0; text-align: center; font-size: 24px; font-weight: 700; font-family: 'Exo 2', sans-serif;">Education &amp; Career</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+       <div class="form-field"><label for="reg-education" class="form-field-label">Highest Education *</label> <input type="text" id="reg-education" class="form-field-input" placeholder="e.g., B.Tech, MBA, etc." required>
+       </div>
+       <div class="form-field"><label for="reg-occupation" class="form-field-label">Occupation *</label> <input type="text" id="reg-occupation" class="form-field-input" placeholder="Enter your occupation" required>
+       </div>
+       <div class="form-field"><label for="reg-income" class="form-field-label">Annual Income *</label> <input type="text" id="reg-income" class="form-field-input" placeholder="e.g., ₹5-8 LPA" required>
+       </div>
+      </div>
+      <h3 style="color: #e63946; margin: 40px 0 30px 0; text-align: center; font-size: 24px; font-weight: 700; font-family: 'Exo 2', sans-serif;">Contact Details</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+       <div class="form-field"><label for="reg-phone" class="form-field-label">Phone Number *</label> <input type="tel" id="reg-phone" class="form-field-input" placeholder="+91 98765 43210" required>
+       </div>
+       <div class="form-field"><label for="reg-email" class="form-field-label">Email Address *</label> <input type="email" id="reg-email" class="form-field-input" placeholder="your.email@example.com" required>
+       </div>
+       <div class="form-field"><label for="reg-whatsapp" class="form-field-label">WhatsApp Number</label> <input type="tel" id="reg-whatsapp" class="form-field-input" placeholder="+91 98765 43210">
+       </div>
+       <div class="form-field"><label for="reg-instagram" class="form-field-label">Instagram Handle</label> <input type="text" id="reg-instagram" class="form-field-input" placeholder="@yourusername">
+       </div>
+      </div>
+      <h3 style="color: #e63946; margin: 40px 0 30px 0; text-align: center; font-size: 24px; font-weight: 700; font-family: 'Exo 2', sans-serif;">Location &amp; Family</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+       <div class="form-field"><label for="reg-city" class="form-field-label">City *</label> <input type="text" id="reg-city" class="form-field-input" placeholder="Enter your city" required>
+       </div>
+       <div class="form-field"><label for="reg-state" class="form-field-label">State *</label> <input type="text" id="reg-state" class="form-field-input" placeholder="Enter your state" required>
+       </div>
+       <div class="form-field"><label for="reg-country" class="form-field-label">Country *</label> <input type="text" id="reg-country" class="form-field-input" placeholder="Enter your country" required>
+       </div>
+       <div class="form-field"><label for="reg-family-type" class="form-field-label">Family Type</label> <select id="reg-family-type" class="form-field-input" style="appearance: auto;"> <option value="">Select Type</option> <option value="nuclear">Nuclear Family</option> <option value="joint">Joint Family</option> </select>
+       </div>
+       <div class="form-field"><label for="reg-father-occupation" class="form-field-label">Father's Occupation</label> <input type="text" id="reg-father-occupation" class="form-field-input" placeholder="Enter father's occupation">
+       </div>
+       <div class="form-field"><label for="reg-mother-occupation" class="form-field-label">Mother's Occupation</label> <input type="text" id="reg-mother-occupation" class="form-field-input" placeholder="Enter mother's occupation">
+       </div>
+       <div class="form-field"><label for="reg-siblings" class="form-field-label">Number of Siblings</label> <input type="number" id="reg-siblings" class="form-field-input" placeholder="0" min="0" max="20">
+       </div>
+      </div>
+      <h3 style="color: #e63946; margin: 40px 0 30px 0; text-align: center; font-size: 24px; font-weight: 700; font-family: 'Exo 2', sans-serif;">About You</h3>
+      <div class="form-field"><label for="reg-about" class="form-field-label">About Yourself</label> <textarea id="reg-about" class="form-field-textarea" placeholder="Write a brief description about yourself, your interests, and what you're looking for in a partner..." style="min-height: 160px;"></textarea>
+      </div>
+      <div class="form-field"><label for="reg-expectations" class="form-field-label">Partner Expectations</label> <textarea id="reg-expectations" class="form-field-textarea" placeholder="Describe your expectations and preferences for your life partner..." style="min-height: 140px;"></textarea>
+      </div><button type="submit" class="form-submit-btn" id="register-submit-btn">Submit Registration</button>
+     </form>
+    </div><button class="floating-home-btn" onclick="navigateTo('home')">🏠 Home</button>
    </div><!-- BRIDES PAGE -->
    <div id="brides-page" class="page">
     <nav class="futuristic-nav">
      <div class="cyber-logo" id="nav-logo-brides" data-text="Rasi Matrimony">
       Rasi Matrimony
      </div>
-     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
+     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('register')">Register</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
      </div>
     </nav>
     <h1 class="mega-title">Beautiful Brides</h1>
@@ -1470,7 +1547,7 @@
      <div class="cyber-logo" id="nav-logo-grooms" data-text="Rasi Matrimony">
       Rasi Matrimony
      </div>
-     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
+     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('register')">Register</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
      </div>
     </nav>
     <h1 class="mega-title">Eligible Grooms</h1>
@@ -1596,7 +1673,7 @@
      <div class="cyber-logo" id="nav-logo-stories" data-text="Rasi Matrimony">
       Rasi Matrimony
      </div>
-     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
+     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('register')">Register</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
      </div>
     </nav>
     <h1 class="mega-title">Success Stories</h1>
@@ -1615,7 +1692,7 @@
      <div class="cyber-logo" id="nav-logo-contact" data-text="Rasi Matrimony">
       Rasi Matrimony
      </div>
-     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
+     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('register')">Register</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
      </div>
     </nav>
     <h1 class="mega-title">Get In Touch</h1>
@@ -1683,7 +1760,7 @@
      <div class="cyber-logo" id="nav-logo-payment" data-text="Rasi Matrimony">
       Rasi Matrimony
      </div>
-     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
+     <div class="nav-buttons"><button class="cyber-btn" onclick="navigateTo('home')">Home</button> <button class="cyber-btn" onclick="navigateTo('register')">Register</button> <button class="cyber-btn" onclick="navigateTo('brides')">Brides</button> <button class="cyber-btn" onclick="navigateTo('grooms')">Grooms</button> <button class="cyber-btn" onclick="navigateTo('stories')">Stories</button> <button class="cyber-btn" onclick="navigateTo('contact')">Contact</button> <button class="cyber-btn" onclick="navigateTo('payment')">Payment</button>
      </div>
     </nav>
     <h1 class="mega-title">Payment Details</h1>
@@ -1755,6 +1832,31 @@
       }, 2000);
     }
 
+    function submitRegistrationForm(event) {
+      event.preventDefault();
+      const submitBtn = document.getElementById('register-submit-btn');
+      
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.style.opacity = '0.7';
+      submitBtn.disabled = true;
+      
+      setTimeout(() => {
+        submitBtn.textContent = '✓ Registration Successful!';
+        submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        
+        setTimeout(() => {
+          const form = event.target;
+          form.reset();
+          submitBtn.textContent = 'Submit Registration';
+          submitBtn.style.background = 'linear-gradient(135deg, #e63946, #f77f00)';
+          submitBtn.style.opacity = '1';
+          submitBtn.disabled = false;
+          
+          navigateTo('payment');
+        }, 2000);
+      }, 1500);
+    }
+
     async function onConfigChange(config) {
       const siteTitle = config.site_title || defaultConfig.site_title;
       const heroTitle = config.hero_title || defaultConfig.hero_title;
@@ -1767,7 +1869,7 @@
       const accountNumber = config.account_number || defaultConfig.account_number;
       const ifscCode = config.ifsc_code || defaultConfig.ifsc_code;
 
-      const logoIds = ['nav-logo', 'nav-logo-brides', 'nav-logo-grooms', 'nav-logo-stories', 'nav-logo-contact', 'nav-logo-payment'];
+      const logoIds = ['nav-logo', 'nav-logo-register', 'nav-logo-brides', 'nav-logo-grooms', 'nav-logo-stories', 'nav-logo-contact', 'nav-logo-payment'];
       logoIds.forEach(id => {
         const elem = document.getElementById(id);
         if (elem) {
@@ -1832,5 +1934,5 @@
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ace046ae15e6e29',t:'MTc2NTU1MDg1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ace1376e5f36eef',t:'MTc2NTU1MTQ2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
